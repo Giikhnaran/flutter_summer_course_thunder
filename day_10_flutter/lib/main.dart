@@ -5,45 +5,35 @@ import 'package:flutter/material.dart';
 //function uudee ashiglahdaa material app daa oruulj ugnu
 
 void main() {
-  //1
-  final Container container = Container(
-    //6 zaaval Container container = container geed object oo nerleh shaardlagagui
-    child: Text('Hello World'), //container dotor gants l child baidag
-  );
+  runApp(Scaffold());
+}
 
-  final FloatingActionButton iconButton =
-      FloatingActionButton(onPressed: () {}); //4
-  final Scaffold myScaffold = Scaffold(
-    //5
+class MySuperApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    //build method yoom
+    return MaterialApp(
+        theme: ThemeData(fontFamily: 'Ribeye'),
+        home: Scaffold(
+          appBar: AppBar(
+            title: Text('Hello Khangai'),
+          ),
+          body: Container(
+            child: Center(
+              child: Text(
+                'Hello Body',
+                style: TextStyle(color: Colors.greenAccent, fontSize: 34),
+              ),
+            ),
+          ),
+          floatingActionButton: FloatingActionButton(
+            onPressed: printMe,
+            child: Image.asset('assets/images/fb.png'),
+          ),
+        ));
+  }
+}
 
-    //text widget
-    appBar: AppBar(
-      //6
-      title: Text('Welcome'), //parameter=argument
-    ),
-
-    //container widget
-    body: Container(
-
-      //center widget
-      child: Center(
-        child: Text('Hello Body',
-            style: TextStyle(fontSize: 34, color: Color(0xFFF06292))),
-      ), //7
-    ),
-
-    //Icon Widget
-    floatingActionButton: FloatingActionButton(
-      onPressed: () {},
-      child: Icon(Icons.thumb_up),
-    ), //8
-  );
-  final MaterialApp app = MaterialApp(
-    //2
-    theme: ThemeData(
-        fontFamily:
-            'Ribeye'), //ribeye ni shine ungiin font //Google font oos avdag
-    home: myScaffold,
-  );
-  runApp(app); //3
+void printMe() {
+  print('Hello me');
 }
