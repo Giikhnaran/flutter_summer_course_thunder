@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 //function uudee ashiglahdaa material app daa oruulj ugnu
 
 void main() {
-  runApp(Scaffold());
+  runApp(MySuperApp());
 }
 
 class MySuperApp extends StatelessWidget {
