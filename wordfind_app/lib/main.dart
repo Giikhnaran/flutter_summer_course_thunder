@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:wordfind_app/Task_page.dart';
+import 'package:wordfind_app/task_page.dart';
 import 'package:wordfind_app/welcome_page.dart';
 
 void main() {
@@ -9,7 +9,7 @@ void main() {
       fontFamily: 'Ribeye',
 
     ),
-    home: Taskpage(),
+    home: WelcomePage(),
   ))
   ;
 }

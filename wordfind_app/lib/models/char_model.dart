@@ -8,7 +8,7 @@ class CharModel {
       this.correctValue,
       this.currentIndex,
       this.currentValue}) ;
-  GetCurrentValue()
+  getCurrentValue() //non type
   {
     if ( correctValue != null) {
       return currentValue;
@@ -17,7 +17,7 @@ class CharModel {
       return correctValue;
     }
   }
-  ClearValue(){
+  void clearValue(){
     currentValue = null;
     currentIndex = null;
   }
